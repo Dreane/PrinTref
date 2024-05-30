@@ -1,0 +1,108 @@
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin-bottom: 20px;
+    color: rgb(15, 30, 100);
+}
+
+header{
+    width: 100%;
+    padding: 20px;
+    background-color:rgb(176, 189, 245);
+}
+
+main{
+    position: relative;
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+}
+.mainer{
+    background: url(../img/bg_header.jpg) no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.request{
+    transform: translateY(100px) translateX(50px);
+    max-width: 40%;
+    background-color: rgb(190, 189, 241);
+    padding: 50px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.radios{
+    display: flex;
+}
+.radio_place{
+    margin-left: 5vw;
+    margin-right: 60px;
+    padding: 30px 60px;
+}
+
+.form_place input{
+    display: block;
+    width: 90%;
+    height: 50px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    padding-left: 4%;
+    border: 0;
+}
+
+input.send_file{
+    border-radius: 0px;
+    margin-bottom: 0;
+    height: 30px;
+    
+}
+
+.form_radio input[type=radio]{
+    margin-right: 1vw;
+    margin-left: 5vw;
+}
+
+.form_place input[type=submit]{
+    padding-left: 0%;
+    background-color: white;
+    font-size: 15px;
+    margin-top: 35px;
+}
+
+footer{
+    padding: 30px 40px;
+    width: 100%;
+    background-color: rgb(176, 189, 245);
+}
+
+@media only screen and (max-width: 960px){
+    main{
+        margin: 0;
+        padding: 30px;
+        width: 100%;
+    }
+    .mainer{
+        background: white;
+    }
+    .request{
+        transform: translateY(0px) translateX(0px);
+        max-width: 100%;
+        background-color: rgb(190, 189, 241);
+        padding: 50px;
+        border-radius: 50px;
+        transition: 0.5s;
+}
+}

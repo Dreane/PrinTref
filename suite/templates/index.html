@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+    <title>Печатник116</title>
+</head>
+<body>
+    <header>
+        <h1>Печатник116</h1>
+    </header>
+    <main>
+        <div class="mainer">
+            <div class="request">
+            <h1 >Привет, чтобы распечатать заполни небольшую анкету</h1>
+            <form action="" class="form_radio" >
+                <h2 id="question"><label for="choice">Откуда ты?</label></h2>
+                <div class="radios">
+                    <p>
+                        <input type="radio" name="choice" id="radio_place0" value="trefolya" class="radio_place">Трефолева 1
+                    </p>
+                    <p>
+                        <input type="radio" name="choice" id="radio_place1" value="ist341" class="radio_place">ИСТ-341
+                    </p>
+                </div>
+
+            </form>
+
+            <form action="" class="form_place" id="form_trefolya" method="post">
+                {{ form.csrf_token }}
+                <p>{{form.name() }}</p>
+                <p>{{form.room() }}</p>
+                <p> {{form.file() }}</p>
+                <p>{{form.submit() }}</p>
+<!--                <input type="text" name="name" placeholder="Имя" form="form_trefolya">-->
+<!--                <input type="text" name="room" placeholder="Комната">-->
+<!--                <input type="text" name="id_contact" id="" placeholder="ID tg/vk">-->
+<!--                <input type="file" name="file" id="" value="Отправить" class="send_file" multiple>-->
+<!--                <p style="font-size: 15px;">*Для отправки нескольких файлов используйте zip-папку*</p>-->
+<!--                <p>-->
+<!--                    <input type="submit" value="Отправить" >-->
+<!--                </p>-->
+
+            </form>
+
+            <form action="" class="form_ist form_place">    
+                <input type="text" name="name" placeholder="Имя">
+                <p><input type="file" name="file" id="" value="Отправить" class="send_file"></p>
+                <p style="font-size: 15px;">*Для отправки нескольких файлов используйте zip-папку*</p>
+                <p>
+                    <input type="submit" value="Отправить">
+                </p>
+            </form>            
+            </div>
+        </div>
+       
+
+    </main>
+    <footer>
+        <p>Для контактов: Трефолева 1 комната 116 89898989888898</p>
+    </footer>
+    <script src="{{url_for('static', filename='js/app.js')}}"></script>
+</body>
+</html>
